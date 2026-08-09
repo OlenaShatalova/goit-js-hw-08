@@ -68,7 +68,7 @@ const galleryList = document.querySelector('.gallery');
 const markup = images
   .map(
     image => `<li class="gallery-item">
-  <a class="gallery-link" href="${image.original}" onclick="event.preventDefault()">
+  <a class="gallery-link" href="${image.original}">
     <img
       class="gallery-image"
       src="${image.preview}"
@@ -84,6 +84,8 @@ const markup = images
 galleryList.innerHTML = markup;
 
 galleryList.addEventListener('click', function (event) {
+  event.preventDefault();
+
   if (event.target.tagName === 'IMG') {
     const largeImageURL = event.target.dataset.source;
     const instance = basicLightbox.create(`
