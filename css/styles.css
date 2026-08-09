@@ -18,7 +18,9 @@
 .gallery-link {
   display: block;
   transition: transform 0.3s ease;
-  cursor: url('./blue-cursor.png') 12 12, auto;
+  cursor:
+    url('./blue-cursor.png') 12 12,
+    auto;
 }
 
 .gallery-image {
